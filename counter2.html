@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js" defer></script>
+</head>
+<body>
+    <div x-data="{}"></div>
+    <div x-data="{ title: 'Hello Mandy' }">
+        <p x-text="title"></p>
+        <button x-on:click="title='Mandy Rocks!'">click me</button>
+    </div>
+    <div x-data="{ count: 1 }">
+        <p x-text="count"></p>
+        <button @click="count++">Count Up</button>
+        <button @click="count--">Count Down</button>
+    </div>
+</body>
+</html>
