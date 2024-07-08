@@ -3,16 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>AlpineJS Counter Widget</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.10.3/dist/cdn.min.js" defer></script>
 </head>
 <body>
-    <div>
-        <div class="counter" > </div>
-        <div>
-              <button class="increment" >Increment</button>
-              <button class="decrement" >Decrement</button>
+    <h1>Counter</h1>
+    <div class="counter-container" x-data="{ count: 0 }">
+        <div class="counter-display">
+            <div x-text="count"></div>
         </div>
-   </div>
-   <script src="./index.js" defer ></script>
+        <div class="counter-buttons">
+            <button @click="count++">+</button>
+            <button @click="count > 0 ? count-- : count" :disabled="count <= 0">-</button>
+        </div>
+    </div>
 </body>
 </html>

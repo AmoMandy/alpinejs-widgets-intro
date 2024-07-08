@@ -13,3 +13,8 @@ decrementBtn.addEventListener('click', function() {
     counter--;
     counterElem.innerText = counter;
 });
+
+document.addEventListener('alpine:init', () => {
+    Alpine.data('counter', Counter);
+  });
+  
