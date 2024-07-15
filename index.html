@@ -5,18 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AlpineJS Counter Widget</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.10.3/dist/cdn.min.js" defer></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 <body>
     <h1>Counter</h1>
-    <div class="counter-container" x-data="{ count: 0 }">
+    <div class="counter-container" x-data="counterWidget()">
         <div class="counter-display">
             <div x-text="count"></div>
         </div>
         <div class="counter-buttons">
-            <button @click="count++">+</button>
-            <button @click="count > 0 ? count-- : count" :disabled="count <= 0">-</button>
+            <button @click="increment">+</button>
+            <button @click="decrement">-</button>
+            <button @click="reset">Reset</button>
         </div>
     </div>
+
+    <script src="./index.js"></script>
+    <script src="./counter.js"></script>
 </body>
 </html>

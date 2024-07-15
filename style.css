@@ -1,8 +1,5 @@
-.darkmode {
+body {
     background-color: rgb(249, 8, 173);
     color: rgb(10, 230, 250);
 
-}
-.lightmode {
-    color: blue;
 }

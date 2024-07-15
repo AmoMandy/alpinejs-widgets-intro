@@ -1,20 +1,21 @@
-let counter = 0;
+// let counter = 0;
 
-const counterElem = document.querySelector('.counter');
-const incrementBtn =  document.querySelector('.increment');
-const decrementBtn = document.querySelector('.decrement');
+// const counterElem = document.querySelector('.counter');
+// const incrementBtn =  document.querySelector('.increment');
+// const decrementBtn = document.querySelector('.decrement');
 
-incrementBtn.addEventListener('click', function() {
-    counter++;
-    counterElem.innerText = counter;
-});
+// incrementBtn.addEventListener('click', function() {
+//     counter++;
+//     counterElem.innerText = counter;
+// });
 
-decrementBtn.addEventListener('click', function() {
-    counter--;
-    counterElem.innerText = counter;
-});
+// decrementBtn.addEventListener('click', function() {
+//     counter--;
+//     counterElem.innerText = counter;
+// });
 
 document.addEventListener('alpine:init', () => {
     Alpine.data('counter', Counter);
   });
-  
+
+
